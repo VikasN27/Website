@@ -1,0 +1,241 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-size:auto;
+	background-position: center;
+}
+.navbar{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+	margin-top: -20px;
+	margin-left: -80px;
+	width: 60px;
+	cursor: pointer;
+
+}
+.navbar ul li{
+	margin-top: 90px;
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+}
+.navbar ul li::after{
+	content: '';
+	height: 3px;
+	width: 0%;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+
+}
+body{
+	background-image:url(back.jpg) ;
+	background-size: fit;
+	height: 100vh;
+	display: flex;
+}
+section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+}
+section .imgBx{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	
+}	
+section .imgBx:before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(225deg,#e91e63,#03a9f4);
+	z-index: 1;
+	mix-blend-mode: screen;
+}
+
+section .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+section .contentBx{
+	display: flex;
+	width: 50%;
+	height:100%;
+	justify-content: center;
+	align-items: center;
+}
+section .contentBx .formBx{
+	width: 50%;
+
+}
+section .contentBx .formBx h2{
+	color: black;
+	font-weight: 600;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	border-bottom: 4px solid #009688;;
+	display: inline-block;
+	letter-spacing: 1px;
+
+}
+
+section .contentBx .formBx .inputBx{
+	margin-bottom: 20px;
+}
+section .contentBx .formBx .inputBx span{
+	font-size:  16px;
+	margin-bottom: 5px;
+	display: inline-block;
+	color: black;
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx input{
+	width: 100%;
+	padding: 10px 20px;
+	outline: none;
+	font-weight: 400;
+	border: 1px solid #black;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	background: transparent;
+	border-radius: 30px;
+}
+div .ind button {
+	width: 100px;
+	padding: 5px 0;
+	text-align: center;
+	margin-bottom:10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 3px solid #009688;;
+	background: transparent;
+	color: black;
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+section .contentBx .formBx .inputBx input[type="submit"]{
+	background: #ff4584;
+	color: black;
+	outline: none;
+	border: none;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+section .contentBx .formBx .inputBx input[type="submit"]:hover{
+	background: #f54677;
+}
+
+section .contentBx .formBx .remember{
+ 	margin-bottom: 10px;
+ 	color: black;
+ 	font-weight: 400;
+ 	font-size: 14px;
+}
+section .contentBx .formBx .inputBx p{
+	color: black;
+}
+
+section .contentBx .formBx .inputBx p a{
+ color: black;
+}
+ section .contentBx .formBx h3{
+ 	color: black;
+ 	text-align: center;
+ 	margin: 80px 0 10px;
+ 	font-weight: 500;
+ }
+section .contentBx .formBx .sci{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section .contentBx .formBx .sci li{
+	list-style: none;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	border-radius: 50%;
+	margin: 0 7px;
+	cursor: pointer;
+}
+
+section .contentBx .formBx .sci li:hover{
+	background: #009688;;
+}
+section .contentBx .formBx .sci li img{
+	transform: scale(1);
+	filter: invert(1);
+}
+@media(max-width 768px)
+{
+	section .imgBx{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+	}
+	section .contentBx{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	section .contentBx .formBx{
+		width: 100%;
+		padding: 40px;
+		background: rgb(255 255 255 / 0.9);
+		margin: 50px;
+	}
+	section .contentBx .formBx h3{
+		color: #black;
+		text-align: center;
+		margin: 30px 0 10px;
+		font-weight: 500;
+	}
+}
